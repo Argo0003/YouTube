@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+</head>
+<body id="bodyID">
+	<header class="top-line-header">
+		<div class="top-line-header-wrap">
+			<button id="buttonNav"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			<div class="logo">
+				<a href="#" class="logo-link"><img class="logo-img" src="img/logo.png" alt="logo"></a>
+				<span class="logo-county-code">ru</span>
+			</div>
+			<div class="search-wrap">
+				<input type="text" id="inputSearch" placeholder="Введите запрос">
+				<button class="search-button" id="searchButton"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="users-panel">
+				<button title="Создать видео или запись"><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+				<button title="Приложения YouTube"><i class="fa fa-table" aria-hidden="true"></i></button>
+				<button title="Сooбщения"><i class="fa fa-comment" aria-hidden="true"></i></button>
+				<button title="Уведомления"><i class="fa fa-bell" aria-hidden="true"></i></button>
+				<button><i class="fa fa-user-circle" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</header>
+	<section class="main-section" id="mainSection">
+		<div class="row no-gutters">
+			<div class="col-md-2 left-panel" id="leftPanel">
+				<div class="left-panel-section">
+					<a class="active" href="#" title="Главная"><i class="fa fa-home" aria-hidden="true"></i>Главная</a>
+					<a href="#" title="В тренде"><i class="fa fa-fire" aria-hidden="true"></i>В тренде</a>
+					<a href="#" title="Подписки"><i class="fa fa-address-book" aria-hidden="true"></i>Подписки</a>
+				</div>
+				<div class="left-panel-section">
+					<a href="#" class="left-navigation-header" title="Библиотека">Библиотека</a>
+					<a href="#" title="История"><i class="fa fa-history" aria-hidden="true"></i>История</a>
+					<a href="#" title="Просмотреть позже"><i class="fa fa-clock-o" aria-hidden="true"></i>Просмотреть позже</a>
+					<a href="#" title="Понравившиеся видео"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Понравившиеся...</a>
+				</div>
+				<div class="left-panel-section">
+					<a href="#" class="left-navigation-header">Подписки</a>
+				</div>
+				<div class="left-panel-section">
+					<span>Другие возможности</span>
+					<a href="#" title="YouTube Premium"><i class="fa fa-youtube-play" aria-hidden="true"></i>YouTube Premium</a>
+					<a href="#" title="Фильмы"><i class="fa fa-film" aria-hidden="true"></i>Фильмы</a>
+					<a href="#" title="Прямые трансляции"><i class="fa fa-podcast" aria-hidden="true"></i>Прямые трансляции</a>
+				</div>
+				<div class="left-panel-section">
+					<a href="#" title="Настройки"><i class="fa fa-cog" aria-hidden="true"></i>Настройки</a>
+					<a href="#" title="Cooбщения о нарушениях"><i class="fa fa-flag" aria-hidden="true"></i>Сooбщения о на...</a>
+					<a href="#" title="Справка"><i class="fa fa-question-circle" aria-hidden="true"></i>Справка</a>
+					<a href="#" title="Отправить отзыв"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Отправить отзыв</a>
+				</div>
+				<div class="left-panel-footer">
+					<div class="left-panel-footer-blog">
+						<a href="#">О сервисе</a>
+						<a href="#">Прессе</a>
+						<a href="#">Правообладателям</a>
+						<a href="#">Авторам</a>
+						<a href="#">Рекламодателям</a>
+						<a href="#">Разработчикам</a>
+						<a href="#">+YouTube</a>    
+					</div>
+					<div class="left-panel-footer-blog">
+						<a href="#">Условия использования</a>
+						<a href="#">Конфиденциальность</a>
+						<a href="#">Правила и безопасность</a>
+						<a href="#">Новые функции</a>
+					</div>
+				</div>
+		
+			</div>
+		
+			<div class="col-md-10 content-section" id="contentSection">
+		
+				<div class="content-block" id="contentBlock">
+					<span class="title">Рекомендованные</span>
+						<div class="row no-gutters video-block">
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item"> 
+								<div id = "blind"></div>
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/ajlWyHGoNDA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe>
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<span class="views">62 тыс. просмотров &bull;</span>
+										<span class="date">3 недели назад</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe> 
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<span class="views">62 тыс. просмотров &bull;</span>
+										<span class="date">3 недели назад</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/zbHjyMJsCqA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe>
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<span class="views">62 тыс. просмотров &bull;</span>
+										<span class="date">3 недели назад</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe>  
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<div class="description-footer">
+											<span class="views">62 тыс. просмотров &bull;</span>
+											<span class="date">3 недели назад</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/a7q_vACVwq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe>
+									<div class="description">
+										<a href="#" class="video-title">Video-title</a> 
+										<a href="#" class="channel-title">Channel-title</a>
+										<a href="#">
+											<span class="views">62 тыс. просмотров &bull;</span>
+											<span class="date">3 недели назад</span>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+										<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+										</iframe> 
+										<div class="description">
+											<a href="#" class="video-title">Video-title</a> 
+											<a href="#" class="channel-title">Channel-title</a>
+											<a href="#">
+												<span class="views">62 тыс. просмотров &bull;</span>
+												<span class="date">3 недели назад</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+										<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+										</iframe> 
+										<div class="description">
+											<a href="#" class="video-title">Video-title</a> 
+											<a href="#" class="channel-title">Channel-title</a>
+											<a href="#">
+												<span class="views">62 тыс. просмотров &bull;</span>
+												<span class="date">3 недели назад</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+										<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+										</iframe> 
+										<div class="description">
+											<a href="#" class="video-title">Video-title</a> 
+											<a href="#" class="channel-title">Channel-title</a>
+											<a href="#">
+												<span class="views">62 тыс. просмотров &bull;</span>
+												<span class="date">3 недели назад</span>
+											</a>
+										</div>
+									</div>
+							<button class="btn">ЕЩЁ</button>			
+						</div>
+						<span class="title">Популярное</span>
+							<div class="row no-gutters video-block">
+								<div class="col-lg-3 col-md-4 video-item">
+									<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+									</iframe>  
+									<div class="description">
+										<a href="#" class="video-title">Video-title</a> 
+										<a href="#" class="channel-title">Channel-title</a>
+										<a href="#">
+											<span class="views">62 тыс. просмотров &bull;</span>
+											<span class="date">3 недели назад</span>
+										</a>
+									</div>
+								</div>
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe> 
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<span class="views">62 тыс. просмотров &bull;</span>
+										<span class="date">3 недели назад</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe>  
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<span class="views">62 тыс. просмотров &bull;</span>
+										<span class="date">3 недели назад</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe> 
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<span class="views">62 тыс. просмотров &bull;</span>
+										<span class="date">3 недели назад</span>
+									</a>
+								</div>
+							</div>
+						</div>		
+						<span class="title">Продолжить просмотр</span>
+						<div class="row no-gutters video-block">
+							<div class="col-md-3 video-item">
+								<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+								</iframe> 
+								<div class="description">
+									<a href="#" class="video-title">Video-title</a> 
+									<a href="#" class="channel-title">Channel-title</a>
+									<a href="#">
+										<span class="views">62 тыс. просмотров &bull;</span>
+										<span class="date">3 недели назад</span>
+									</a>
+								</div>
+							</div>
+						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+							<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> 
+							<div class="description">
+								<a href="#" class="video-title">Video-title</a> 
+								<a href="#" class="channel-title">Channel-title</a>
+								<a href="#">
+									<span class="views">62 тыс. просмотров &bull;</span>
+									<span class="date">3 недели назад</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+							<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> 
+							<div class="description">
+								<a href="#" class="video-title">Video-title</a> 
+								<a href="#" class="channel-title">Channel-title</a>
+								<a href="#">
+									<span class="views">62 тыс. просмотров &bull;</span>
+									<span class="date">3 недели назад</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+							<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> 
+							<div class="description">
+								<a href="#" class="video-title">Video-title</a> 
+								<a href="#" class="channel-title">Channel-title</a>
+								<a href="#">
+									<span class="views">62 тыс. просмотров &bull;</span>
+									<span class="date">3 недели назад</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<span class="title">Последние опуликованные видео</span>
+					<div class="row no-gutters video-block">
+						<div class="col-md-3 video-item">
+							<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+							</iframe> 
+							<div class="description">
+								<a href="#" class="video-title">Video-title</a> 
+								<a href="#" class="channel-title">Channel-title</a>
+								<a href="#">
+									<span class="views">62 тыс. просмотров &bull;</span>
+									<span class="date">3 недели назад</span>
+								</a>
+							</div>
+						</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+						<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+						</iframe> 
+						<div class="description">
+							<a href="#" class="video-title">Video-title</a> 
+							<a href="#" class="channel-title">Channel-title</a>
+							<a href="#">
+								<span class="views">62 тыс. просмотров &bull;</span>
+								<span class="date">3 недели назад</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+						<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+						</iframe> 
+						<div class="description">
+							<a href="#" class="video-title">Video-title</a> 
+							<a href="#" class="channel-title">Channel-title</a>
+							<a href="#">
+								<span class="views">62 тыс. просмотров &bull;</span>
+								<span class="date">3 недели назад</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+						<iframe width="211" height="120" src="https://www.youtube.com/embed/dSs5o2qAt2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+						</iframe> 
+						<div class="description">
+							<a href="#" class="video-title">Video-title</a> 
+							<a href="#" class="channel-title">Channel-title</a>
+							<a href="#">
+								<span class="views">62 тыс. просмотров &bull;</span>
+								<span class="date">3 недели назад</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<script src="js/common.js"></script>
+</body>
+</html>
