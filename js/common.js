@@ -6,7 +6,7 @@ videoItems     = document.getElementsByClassName('video-item'),
 contentBlock   = document.getElementById('contentBlock');
 
 document.getElementById('buttonNav').onclick = function() {
-	if ( leftPanel.style.display == 'none') {ы
+	if ( leftPanel.style.display == 'none') {
 		leftPanel.style.display = 'block';
 		contentSection.classList.remove('col-lg-12');
 		contentSection.classList.add('col-lg-10');
