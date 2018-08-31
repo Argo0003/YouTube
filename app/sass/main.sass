@@ -1,0 +1,1244 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 18px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text-color
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+a 
+	color: $text-color
+	&:hover, &:focus 
+		color: $text-color
+
+.top-line
+	background-color: $accent
+	position: 
+	height: 65px	
+
+.logo
+	font-family:  baron-f, sans-serif
+	color: #fff
+	font-size: 23px
+	display: inline-block
+	position: absolute
+	padding-left: 30px
+	left: 0
+	line-height: 65px
+	&:hover, &:focus 
+		color: #ffffff
+		text-decoration: none
+	span 
+		color: #000
+
+.main-menu
+	padding: 0 100px
+	width: 100%
+	text-align: center
+	ul, li 
+		list-style-type: none
+		pading: 0
+		margin: 0
+	li 
+		margin-left: -5px
+		display: inline-block
+		cursor: pointer
+		font-weight: bold
+		text-transform: uppercase
+		color: #E6E6E6
+		font-size: 14px
+		line-height: 65px
+		&.active 
+			a 
+				color: #ffffff
+				background-color: lighten($accent, 8)
+	a 
+		color: #E6E6E6
+		text-decoration: none	
+		line-height: 65px
+		padding: 0 25px
+		display: block
+		transition: color .25s ease, background-color .25s ease
+		line-height: 65px
+		&:hover
+			color: #ffffff
+			background-color: lighten($accent, 15) !important 
+		
+	div 
+		display: inline-block
+		cursor: pointer
+		padding: 0 25px
+		&:hover
+			color: #ffffff
+			transition: color .25s ease, background-color .25s ease
+			background-color: lighten($accent, 15)
+
+	.dd-links
+		display: none
+		position: absolute
+		background-color: $accent
+		z-index: 3
+		a 
+			line-height: 32px !important
+			padding: 5px 25px
+
+	.dd-list
+		&:hover
+			.dd-links
+				padding: 0
+				background-color: $accent
+				display: block
+
+.search-wrap
+	.search
+		position: absolute
+		padding: 
+			right: 50px
+		right: 0
+		line-height: 65px
+		color: #FF709C
+		cursor: pointer
+		transition: color .25s ease
+		&:hover
+			color: lighten(#FF709C, 15)
+	.search-field	
+		position: absolute
+		top: 65px
+		left: 0
+		padding: 15px
+		background-color: lighten($accent,3)
+		width: 100%
+		border-top: lighten($accent,8) 1px solid
+		z-index: 5
+		display: none
+		input[type=text]
+			width: 100%
+			padding: 8px 15px
+			background-color: lighten($accent,15) 
+			border: lighten($accent,8) 1px solid
+			font-size: 16px
+			color: #ffffff
+			outline: none
+			&:focus
+				border-color: lighten($accent,20) 
+			&::placeholder 
+				color: rgba(#fff, .7)
+				font-family: arial, sans-serif
+				font-style: italic
+
+.mobile-menu-button		
+	color: #ffffff
+	text-align: right
+	margin-right: 100px
+	cursor: pointer
+	line-height: 65px
+	font-size: 17px
+	text-transform: uppercase
+	font-weight: bold
+	white-space: 
+	display: none
+	&:hover
+		color: #000000
+
+.mobile-menu
+	display: none
+	background-color: lighten($accent,10) 
+	border-top: lighten($accent,20) 1px solid
+	.top-menu
+		display: block
+	li 
+		display: block
+		line-height: 32px
+		a 
+			padding: 0
+			line-height: 32px
+		
+.ad
+	text-align: center
+	width: 100%
+	display: block
+	overflow: hidden
+
+.top-ad
+	margin-bottom: $gutter
+
+.container-fluid
+	max-width: 1200px
+	padding: 0 $gutter
+
+section 
+	background-color: #fafafa
+	padding: 
+		top: $gutter
+		bottom: $gutter
+	h2 	
+		text-transform: uppercase
+		margin: 0
+		font-size: 23px
+		font-weight: 800
+		
+.item-title
+	min-height: 340px
+	&-content 
+		position: absolute
+		bottom: 0
+		color: #ffffff
+		padding: 40px
+		z-index: 1
+		h3 
+			margin: 0
+			text-transform: uppercase
+			font-weight: 800
+			line-height: 1.25
+			font-size: 19px
+		a 
+			color:#fff
+
+.pattern
+	background-color: $overlay
+	position: relative
+	display: block
+	&::before
+		content: ''
+		transition: opacity .25s ease, top .25s ease, left .25s ease, bottom .25s ease, rigth .25s ease
+		z-index: 1
+		position: absolute
+		border: #fff solid 1px 
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0
+	&:hover
+		.overlay
+			&::before
+				opacity: 0.75 
+		&::before
+			opacity: 0.2
+			top: 10px
+			right: 10px
+			bottom: 10px
+			left: 10px
+	&-world-header
+		&::before
+			display: none
+
+.overlay
+	background-size: cover
+	background-position: center
+	position: relative
+	display: block
+	&::before
+		content: ''
+		background-color: $overlay
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0.55
+		transition: opacity .25s ease
+	&:hover
+		&::before
+			opacity: 0.75 
+.item-social
+	margin-top: 10px
+	.fa
+		font-size: 12px
+		margin-right: 5px
+
+.item-comments
+	display: inline-block
+	margin-right: 20px
+	&-count
+		font-size: 12px
+		display: inline-block
+		position: relative 
+		&::after
+			content: ''
+			font-family: fontawesome 
+			font-size: 5px
+			top: 35%
+			margin-left: 10px
+			margin-right: 10px
+			position: absolute
+			opacity: 0.35
+
+.likely-custom
+	display: inline-block
+	font-size: 12px
+	.likely__button
+		padding-left: 15px
+	> div
+		padding: 0 4px 0 3px
+		position: relative 
+		cursor: pointer
+		margin: 6px 2px 0
+		border: 1px solid #ffffff
+		border-radius: 2px
+	.likely__counter
+		display: none
+	svg
+		width: 11px
+		height: auto
+		position: absolute
+		top: 3.5px
+		left: 4px
+		path 
+			fill: #ffffff
+	>*
+		display: inline-block
+
+.second-section
+	padding: $gutter/2 0
+
+.news-wrap
+	padding-bottom: $gutter/2	
+	.pattern
+		&::before
+			display: none
+	.overlay
+		&::before
+			opacity: 0.4
+
+.item-news
+	min-height: 280px
+	margin: $gutter/2 0
+	&::after
+			content: ''
+			background-color: #ffffff
+			opacity: 0.6
+			position: absolute
+			bottom: 0
+			top: 50%
+			z-index: 2
+			left: 0
+			right: 0
+	&-content 
+		position: absolute
+		z-index: 10
+		bottom: 0	
+		padding: $gutter  $gutter  $gutter+15 $gutter
+		h3 
+			font-size: 17px
+			line-height: 1.2
+			font-weight: 800
+			margin: 0
+	&:hover
+		h3
+			text-decoration: underline
+		
+.date
+	font-size: 13px
+	color: $accent
+	font-family: baron-f, sans-serif
+	
+.aside-box
+	margin-bottom: $gutter
+	text-align: center
+	.img-responsive
+		display: inline-block
+
+.accent-section
+	padding: $gutter 0
+	background-color: $accent
+	h2 
+		a
+			color: #ffffff
+	.col-item
+		margin: 12px 0 15px
+		a 
+			transition: color .25s ease
+			color: #ffffff
+			h4 
+				padding-top: $gutter
+			&:hover
+				.overlay
+					&::before
+						opacity: 0.1 
+				.pattern
+						&::before
+							opacity: 0.4
+							top: 10px
+							right: 10px
+							bottom: 10px
+							left: 10px
+
+.fourth-section 
+	background-color: #F5F5F5
+	padding-top: 30px
+	h2 
+		margin-bottom: 10px
+	.item-title
+		&-content 
+			h3 
+				text-transform: none
+		.date
+			color: #ffffff
+
+.type-one
+	&-header
+		margin-bottom: $gutter/2
+	&-first
+		.item-social 
+			color: #B2B3B4
+			a 
+				color: #B2B3B4
+			.date
+				color: #B2B3B4
+		h3
+			text-transform: uppercase
+			margin-bottom: $gutter/2
+
+	.item-title	
+		min-height: 300px
+		.date
+			color: #ffffff		
+	.pattern
+		margin-bottom: $gutter
+	
+.btn 
+	display: inline-block
+	border: none
+	color: #ffffff
+	text-decoration: none
+	background-color: $accent
+	padding: 12px 40px
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 600
+	border-radius: 10em
+	text-align: center
+	position: relative
+	outline: none
+	cursor: pointer
+	transition: background-color .1s ease
+	&:hover, &:focus 
+		text-decoration: none
+		color: #ffffff
+	&:hover
+		background-color: lighten($accent, 5%)
+	&:active
+		background-color: darken($accent, 5%)
+
+.s_more
+	padding: $gutter*2 0
+	background-color: #f5f5f5
+		
+.main-footer
+	background-color: $dark-accent
+	padding: 25px 0
+	border-bottom: 1px solid rgba(#ffffff, .1)
+
+	.footer-menu
+		.active
+			a 
+				background-color: $dark-accent
+				color: #000000
+		li 
+			a
+				font-size: 13px
+				opacity: 0.9
+				&:hover
+					color: #000000
+					background-color: $dark-accent !important
+			div 
+				font-size: 13px
+				opacity: 0.9
+				&:hover
+					color: #000000
+					background-color: $dark-accent
+			.dd-links
+				background-color: lighten($dark-accent, 3%) !important
+			
+			
+nav.soc
+	ul 
+		margin: 0
+		list-style-type: none
+		text-align: center
+		li 
+			display: inline-block
+			a
+				display: block
+				color: #ffffff
+				margin-right: $gutter
+				border: 1px solid rgba(#fff, .1)
+				border-radius: 10em
+				width: 52px
+				height: 52px
+				line-height: 50px
+				font-size: 24px
+				transition: border-color .25s ease, opacity 25s ease
+				.fa 
+					transition: opacity .25s ease
+					opacity: 0.5
+				&:hover
+					border-color: rgba(#fff, .3)
+					.fa
+						opacity: 1
+
+
+.bottom-footer
+	background-color: $dark-accent
+	padding: 25px 0 35px
+	.logo
+		display: inline-block
+	p 
+		color: rgba(#fff, .2)
+		font-size: 12px
+		margin: 5px
+	.footer-copy 
+		color: rgba(#fff, .2)
+	.logo-footer
+		position:  relative 
+		font-size: 18px
+		padding: 0
+		opacity: 0.9
+		line-height: 1
+
+.world-header
+	background-size: cover
+	background-position: center
+	position: relative	
+	&-box 
+		position: relative
+		padding: 120px 80px
+		color: #ffffff
+		background-color: rgba($accent, .65)
+		h1 
+			text-transform: uppercase
+			font-size: 30px
+			font-weight: 800
+			margin: 0
+			text-align: center
+		&::before	
+			content: ''
+			opacity: 0.2
+			position: absolute
+			border: 1px solid #ffffff
+			top: 10px
+			bottom: 10px
+			left: 10px
+			right: 10px
+
+.type-one-world 
+	background-color: #f5f5f5
+
+a.world-list-item 
+	margin: 
+		top: $gutter/1.5
+		bottom: $gutter/1.5
+	border-bottom: 1px solid #dfdfdf
+	padding-bottom: 4px
+	display: block
+	h3 
+		text-transform: uppercase
+		font-size: 18px
+		margin: 0
+		font-weight: 800
+		color: $text-color
+	.date 
+		padding-bottom: 15px
+	img 
+		margin-bottom: 12px
+		transition: opacity .25s ease
+	p 
+		font-size: 15.4px
+	&:hover
+		text-decoration: none	
+		h3 
+			text-decoration: underline
+			color: $accent
+			transition: color .25s ease
+		p 
+			color: $text-color
+		.pattern 
+			&::before
+				opacity: 0.2
+				top: 10px
+				right: 10px
+				bottom: 10px
+				left: 10px
+		img 
+			opacity: 0.75
+	&:last-child 
+		border-bottom: none
+
+.lb-header 
+	border-bottom: 2px solid $accent
+	padding-bottom: 5px
+	margin-bottom: 10px
+
+.lb-header, .all-posts-header 
+	text-align: left
+	font-size: 21px
+	font-weight: 800
+
+.all-posts-header 
+	text-transform: uppercase
+
+.lb-item 
+	background-color: #f0f0f0
+	position: relative
+	padding-left: 120px
+	margin-bottom: 2px
+	transition: background-color .25s ease
+	text-align: left
+	&:hover 
+		background-color: $accent
+		.lb-body-header 
+			color: $accent
+		.lb-catname
+			color: #ffffff
+	.lb-body-header
+		font-size: 14px		
+		line-height: 1.4
+		display: block
+		padding-top: 10px
+	.date 
+		display: inline-block
+		margin-left: 20px
+		color: #aaaaaa
+		margin-top: 0
+	.item-comments
+		.fa
+	  	font-size: 12px
+	  	margin-right: 5px
+	  	color: #aaaaaa
+		.item-comments-count 
+			color: #aaaaaa
+			&:hover 
+				color: $accent  
+		 
+.lb-body 
+	background-color: #f9f9f9
+	padding-left: 7px
+	a 
+		color: $text-color
+		transition: color .25s ease
+
+.lb-catname 
+	display: block
+	position: absolute
+	left: 15px
+	top: 10px
+	color: #888888
+	font-size: 14px	
+	font-weight: 800
+	max-width: 90px
+	&:focus 
+		color: #888888
+
+.lb-footer 
+	line-height: 1.2
+
+.pagination 
+	background-color: #F5F5F5
+	padding: $gutter*2 0
+	&-smoll 
+		background: none
+		padding: $gutter 0
+		margin-bottom: $gutter
+		border-bottom: 1px solid #dfdfdf
+		padding-top: 0
+		padding-bottom: $gutter
+	&-links 
+		margin-top: 17px
+		a,span 
+			display: inline-block
+			width: 42px
+			height: 42px
+			line-height: 40px
+			border: 1px solid #e5e5e5	
+			border-radius: 10em
+			font-weight: 800	
+			font-size: 18px
+			color: #666666
+			transition: border-color	.25s ease, color .25s ease
+		a 
+			&:hover
+				border-color: $accent
+				color: $accent
+				text-decoration: none	
+			&.pagination-links-right, &.pagination-links-left 
+				color: $accent
+		span 
+			&.active 
+				border-color: $accent
+				color: $accent
+		.pagination-links-right, .pagination-links-left
+			border: none
+			font-size: 32px
+			width: 30px 
+
+.article-header
+	&.overlay
+		&::before
+			opacity: 1
+			background-color: transparent
+			background-image: linear-gradient(rgba(#000, .2), rgba(#000, .9))
+		&:hover
+			&::before
+				opacity: 1
+
+	height: 70vh
+	min-height: 380px
+	color: #ffffff
+	position: relative
+
+.article-header-content
+	position: absolute
+	width: 100%
+	bottom: 15%
+	.article-header-meta
+		> *
+			display: inline-block
+		.date 
+			color: #ffffff
+			font-size: 15px
+		h1 
+			font-size: 32px
+			line-height: 1.2
+			margin: 14px 0
+			display: block
+			text-transform: uppercase
+		.item-comments-count 
+			color: #ffffff
+
+.article-categore-link
+	font-size: 14px
+	text-transform: uppercase
+	color: #ffffff
+	background-color: $accent
+	padding: 1px 6px
+	font-weight: 800
+	margin-right: 5px
+	&:hover, &:focus 
+		color: #ffffff
+		text-decoration: none
+
+.article-content 
+	background-color: #fff
+
+.breadcrumbs 
+	margin-bottom: 15px
+	margin-left: -10px
+	ul,li 
+		margin: 0
+		padding: 0
+		list-style-type: none
+	li 
+		display: inline-block
+		font-size: 16px
+		a 
+			display: inline-block
+			padding: 0 10px
+			position: relative
+			&::after 
+				content: '»'
+				position: absolute
+				right: -6px
+				color: #cccccc
+		&.active 
+			padding-left: 10px
+			color: #888888
+
+.article-body
+	p 
+		margin: 25px 0
+		line-height: 1.6
+	img 
+		display: block
+		max-width: 100%
+		height: auto
+		margin: auto
+	h2,h3,h4,h5,h6 
+		line-height: 1.2 
+	blockquote 
+		padding: $gutter
+		margin: $gutter*2 $gutter*2.5 
+		font-size: 20px
+		color: #000000
+		border: 
+			top: $accent 2px solid	
+			bottom: $accent 2px solid
+	ul, ol 
+		padding-left: $gutter
+		li 
+			margin: 10px 0
+	.video 
+		margin: $gutter 0
+
+.video 
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 25px
+	height: 0
+	iframe 
+		border: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 100% !important
+		height: 100% !important	
+
+
+//Likely in article start
+.likely-in-article
+	$likely-sz: 15px //Likely Font Size
+	.likely, .likely__widget
+		padding: 0
+		text-indent: 0 !important
+		list-style: none !important
+		font-weight: 400
+		font-family: Helvetica Neue,Arial,sans-serif
+
+	.likely
+		display: inline-block
+
+	.likely__widget
+		margin: 0
+		font-size: inherit
+
+	.likely
+		opacity: 0
+		font-size: 0 !important
+
+	.likely_visible
+		opacity: 1
+		transition: opacity .1s ease-in
+
+	.likely > *
+		display: inline-block
+		visibility: hidden
+
+	.likely_visible > *
+		visibility: inherit
+
+	.likely__widget
+		position: relative
+		white-space: nowrap
+
+	.likely__button, .likely__widget
+		display: inline-block
+
+	.likely__button, .likely__counter
+		text-decoration: none
+		text-rendering: optimizeLegibility
+		margin: 0
+		outline: 0
+
+	.likely__button
+		position: relative
+		user-select: none
+
+	.likely__counter
+		display: none
+		position: relative
+		font-weight: 400
+
+	.likely_ready
+		.likely__counter
+			display: inline-block
+		.likely__counter_empty
+			display: none
+
+	.likely__button, .likely__counter, .likely__icon
+		vertical-align: top
+
+	.likely__widget
+		vertical-align: top
+		transition: background .33s ease-out,color .33s ease-out,fill .33s ease-out
+		&:active, &:focus, &:hover
+			transition: none
+			cursor: pointer
+
+	@media (hover: none)
+		.likely__widget
+			&:active, &:focus, &:hover
+				transition: background .33s ease-out,color .33s ease-out,fill .33s ease-out
+				cursor: unset
+
+	.likely__icon
+		position: relative
+		text-align: left
+		display: inline-block
+
+	.likely svg
+		position: absolute
+		left: 3px
+		top: 3px
+		width: 16px
+		height: 16px
+
+	.likely__button, .likely__counter
+		line-height: inherit
+		cursor: inherit
+
+	.likely__button:empty
+		display: none
+
+	.likely__counter
+		text-align: center
+
+	.likely
+		.likely__widget
+			color: #000
+			background: rgba(231, 231, 231, 0.8)
+		.likely__counter
+			background-size: 1px 1px
+			background-repeat: repeat-y
+			background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0) 0.5px, rgba(0, 0, 0, 0) 100%)
+
+	.likely-light
+		.likely__widget
+			color: #fff
+			fill: #fff
+			background: rgba(236, 236, 236, 0.16)
+			text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+		.likely__counter
+			background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 0.5px, rgba(255, 255, 255, 0) 100%)
+
+	.likely__widget_facebook
+		fill: #425497
+		&:active, &:focus, &:hover
+			background: rgba(207, 212, 229, 0.8)
+
+	@media (hover: none)
+		.likely__widget_facebook
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_facebook
+		&:active, &:focus, &:hover
+			text-shadow: #425497 0 0 .25em
+			background: rgba(66, 84, 151, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_facebook
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_gplus
+		fill: #dd4241
+		&:active, &:focus, &:hover
+			background: rgba(246, 207, 207, 0.8)
+
+	@media (hover: none)
+		.likely__widget_gplus
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_gplus
+		&:active, &:focus, &:hover
+			text-shadow: #dd4241 0 0 .25em
+			background: rgba(221, 66, 65, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_gplus
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_linkedin
+		fill: #0077b5
+		&:active, &:focus, &:hover
+			background: rgba(191, 221, 236, 0.8)
+
+	@media (hover: none)
+		.likely__widget_linkedin
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_linkedin
+		&:active, &:focus, &:hover
+			text-shadow: #0077b5 0 0 .25em
+			background: rgba(0, 119, 181, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_linkedin
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_odnoklassniki
+		fill: #f6903b
+		&:active, &:focus, &:hover
+			background: rgba(252, 227, 206, 0.8)
+
+	@media (hover: none)
+		.likely__widget_odnoklassniki
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_odnoklassniki
+		&:active, &:focus, &:hover
+			text-shadow: #f6903b 0 0 .25em
+			background: rgba(246, 144, 59, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_odnoklassniki
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_pinterest
+		fill: #bd081c
+		&:active, &:focus, &:hover
+			background: rgba(238, 193, 198, 0.8)
+
+	@media (hover: none)
+		.likely__widget_pinterest
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_pinterest
+		&:active, &:focus, &:hover
+			text-shadow: #bd081c 0 0 .25em
+			background: rgba(189, 8, 28, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_pinterest
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_telegram
+		fill: #34abde
+		&:active, &:focus, &:hover
+			background: rgba(204, 234, 246, 0.8)
+
+	@media (hover: none)
+		.likely__widget_telegram
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_telegram
+		&:active, &:focus, &:hover
+			text-shadow: #34abde 0 0 .25em
+			background: rgba(52, 171, 222, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_telegram
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_twitter
+		fill: #00b7ec
+		&:active, &:focus, &:hover
+			background: rgba(191, 237, 250, 0.8)
+
+	@media (hover: none)
+		.likely__widget_twitter
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_twitter
+		&:active, &:focus, &:hover
+			text-shadow: #00b7ec 0 0 .25em
+			background: rgba(0, 183, 236, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_twitter
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_vkontakte
+		fill: #526e8f
+		&:active, &:focus, &:hover
+			background: rgba(211, 218, 227, 0.8)
+
+	@media (hover: none)
+		.likely__widget_vkontakte
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_vkontakte
+		&:active, &:focus, &:hover
+			text-shadow: #526e8f 0 0 .25em
+			background: rgba(82, 110, 143, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_vkontakte
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely__widget_whatsapp
+		fill: #25d366
+		&:active, &:focus, &:hover
+			background: rgba(200, 244, 216, 0.8)
+
+	@media (hover: none)
+		.likely__widget_whatsapp
+			&:active, &:focus, &:hover
+				background: rgba(231, 231, 231, 0.8)
+
+	.likely-light .likely__widget_whatsapp
+		&:active, &:focus, &:hover
+			text-shadow: #25d366 0 0 .25em
+			background: rgba(37, 211, 102, 0.7)
+
+	@media (hover: none)
+		.likely-light .likely__widget_whatsapp
+			&:active, &:focus, &:hover
+				text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+				background: rgba(236, 236, 236, 0.16)
+
+	.likely
+		margin: 0 -5px -10px
+		.likely__widget
+			line-height: 20px
+			font-size: 14px
+			border-radius: 3px
+			height: 22px
+			margin: 0 5px 10px
+		.likely__icon
+			width: 22px
+			height: 22px
+		.likely__button
+			padding: 1px 4px 1px 0
+		.likely__counter
+			padding: 1px 4px
+
+	.likely-big
+		margin: 0 -6px -12px
+		.likely__widget
+			line-height: 28px
+			font-size: 18px
+			border-radius: 4px
+			height: 32px
+			margin: 0 6px 12px
+		.likely__icon
+			width: 32px
+			height: 32px
+		.likely__button
+			padding: 2px 6px 2px 0
+		.likely__counter
+			padding: 2px 6px
+		svg
+			left: 4px
+			top: 4px
+			width: 24px
+			height: 24px
+
+	.likely-small
+		margin: 0 -4px -8px
+		.likely__widget
+			line-height: 14px
+			font-size: 12px
+			border-radius: 2px
+			height: 18px
+			margin: 0 4px 8px
+		.likely__icon
+			width: 18px
+			height: 18px
+		.likely__button
+			padding: 2px 3px 2px 0
+		.likely__counter
+			padding: 2px 3px
+		svg
+			left: 3px
+			top: 3px
+			width: 12px
+			height: 12px
+
+	.likely
+		top: -10px
+		position: relative
+		.likely__widget
+			border-radius: 0
+			padding: 3px 3px 25px 6px
+			font-size: $likely-sz
+		.likely__counter
+			padding: 1px 4px 1px 6px
+		.likely__button
+			margin-left: 2px
+			opacity: .8
+			padding: 1px 8px 1px 1px
+//Likely in article end
+
+.article-top-ad
+	margin: $gutter 0
+
+.read-more 
+	margin-bottom: $gutter	
+	&-header 
+		font-size: 21px
+		font-weight: 800
+		margin: $gutter*1.5 0 $gutter/2 0
+	ul, li 
+		margin: 0
+		padding: 0
+		list-style-type: none
+	a 	
+		line-height: 1.3
+		display: inline-block
+		color: #151515
+		transition: color .25s ease 
+		margin: 8px 0
+		text-decoration: underline
+		&:hover 
+			color: $accent
+
+.comments 
+	padding: $gutter 0
+
+.about-header 
+	background-color: $dark-accent
+	color: #ffffff
+	height: 50vh
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	&::before
+		content: ''
+		border: 1px solid $accent
+		position: absolute
+		top: 10px
+		left: 10px
+		right: 10px
+		bottom: 10px
+	h1 
+		font-family: baron-f, sans-serif
+	span 
+		color: #000000
+
+@import "media" // Always at the end

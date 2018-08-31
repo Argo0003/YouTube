@@ -1,0 +1,37 @@
+{
+	"videos": [
+		{
+			"id": "001",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Веселое видео",
+			"channelName": "Veselchack",
+			"views": 540000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		},
+		{
+			"id": "002",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Обучалка",
+			"channelName": "Обучалка тв",
+			"views": 320000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		},
+		{
+			"id": "003",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Очень умное видео",
+			"channelName": "Smart TV",
+			"views": 1000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		},
+		{
+			"id": "004",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Interesting video",
+			"channelName": "VerySmart Tv",
+			"views": 4000000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		}
+	]
+}
+

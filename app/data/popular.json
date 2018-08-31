@@ -1,0 +1,38 @@
+{
+	"videos": [
+		{
+			"id": "001",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Разоблачение блогера",
+			"channelName": "DWS TW",
+			"views": 1500000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		},
+		{
+			"id": "002",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Music video",
+			"channelName": "MusicLala",
+			"views": 6200000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		},
+		{
+			"id": "003",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Версус какой-то",
+			"channelName": "Versus",
+			"views": 5000000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		},
+		{
+			"id": "004",
+			"link":"https://www.youtube.com/watch?v=EOhPgX0c00o",
+			"name":"Очень тупое видео",
+			"channelName": "UnSmart Tv",
+			"views": 3000000,
+			"publish date": "2018-08-08T17:38:06.552Z"
+		}
+
+	]
+}
+
