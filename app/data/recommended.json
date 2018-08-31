@@ -6,7 +6,7 @@
 			"name":"Как достать соседа",
 			"channelName": "Клюква ТВ",
 			"views": 150000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "002",
@@ -14,7 +14,7 @@
 			"name":"Анбоксинг очередной хрени с Китая",
 			"channelName": "China stuff",
 			"views": 620000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "003",
@@ -22,7 +22,7 @@
 			"name":"Очень умное видео",
 			"channelName": "Smart TV",
 			"views": 1000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "004",
@@ -30,7 +30,7 @@
 			"name":"Очень тупое видео",
 			"channelName": "UnSmart Tv",
 			"views": 3000000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "005",
@@ -38,7 +38,7 @@
 			"name":"Ну так, норм видос",
 			"channelName": "Medium TV",
 			"views": 45000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "006",
@@ -46,7 +46,7 @@
 			"name":"Подборка смешной хрени",
 			"channelName": "хохмач канал",
 			"views": 321000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "007",
@@ -54,7 +54,7 @@
 			"name":"Ля ля ля",
 			"channelName": "музТВ",
 			"views": 620000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "008",
@@ -62,7 +62,7 @@
 			"name":"Рэп батл, опять...",
 			"channelName": "Pomoyka",
 			"views": 3450000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		}
 
 	]

@@ -83,35 +83,52 @@ window.onresize = function () {
 }
 
 
-// VideoItem 
-var request = new XMLHttpRequest();
-request.open('get', 'recommended.json');
-request.onload = function () {
-	var recommended = JSON.parse(request.responseText);
-	console.log(recommended[0]);
-};
-request.send(null);
+	// VideoItem 
 
-// document.getElementById('videoBlock').innerHTML = `
-// 	${recommended.videos.map(function (video) {
-// 		return `
-// 			<div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
-// 				<div className="video-item-img"></div>
-// 				<div className="description">
-// 					<a href="#" className="video-title"></a>
-// 					<a href="#" className="channel-title"></a>
-// 					<a href="#">
-// 						<span className="views"></span>
-// 						<span className="date">3 недели назад</span>
-// 					</a>
-// 				</div>
-// 			</div>
-// 			`
-// 	}).join('')
-// 	}
-// 	<button class="btn">ЕЩЁ</button>
-// `
 
+window.onload = function() {
+
+
+	const request = new XMLHttpRequest();
+	request.open('get', 'https://raw.githubusercontent.com/Argo0003/YouTube/master/app/data/recommended.json');
+	request.onload = function () {
+		const recommended = JSON.parse(request.responseText);
+		console.log(recommended.videos);
+		document.getElementById('videoBlock').innerHTML = `
+		${
+			recommended.videos.map(vieoTemplat).join('')
+		}
+		`
+	};
+	request.send();
+	
+
+	function vieoTemplat(video) {
+		return `
+				<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
+					<div id="blind"></div>
+					<div class="video-item-img"></div>
+					<div class="description">
+						<a href="#" class="video-title">${video.name}</a>
+						<a href="#" class="channel-title">${video.channelName}</a>
+						<a href="#">
+							<span class="views">${video.views}</span>
+							<span class="date">${video.publishedDate}</span>
+						</a>
+					</div>
+				</div>
+				`
+	}
+
+}
+
+
+
+	
+	// ${ 
+	// 	recommended.videos.map(vieoTemplat).join('')
+	// }
+	// <button class="btn">ЕЩЁ</button>
 
 
 // var   videoItem = document.createElement('div'),
