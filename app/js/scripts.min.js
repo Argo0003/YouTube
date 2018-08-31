@@ -83,11 +83,9 @@ window.onresize = function () {
 }
 
 
-	// VideoItem 
+// VideoItem 
 
-
-window.onload = function() {
-
+window.onload = function () {
 
 	const request = new XMLHttpRequest();
 	request.open('get', 'https://raw.githubusercontent.com/Argo0003/YouTube/master/app/data/recommended.json');
@@ -97,11 +95,10 @@ window.onload = function() {
 		document.getElementById('videoBlock').innerHTML = `
 		${
 			recommended.videos.map(vieoTemplat).join('')
-		}
+			}
 		`
 	};
 	request.send();
-	
 
 	function vieoTemplat(video) {
 		return `
@@ -119,12 +116,11 @@ window.onload = function() {
 				</div>
 				`
 	}
-
 }
 
 
 
-	
+
 	// ${ 
 	// 	recommended.videos.map(vieoTemplat).join('')
 	// }
