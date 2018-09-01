@@ -6,7 +6,7 @@
 			"name":"Привет мир",
 			"channelName": "привет",
 			"views": 2000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "002",
@@ -14,7 +14,7 @@
 			"name":"Анбоксинг очередной хрени с Америки",
 			"channelName": "USA stuff",
 			"views": 3000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "003",
@@ -22,7 +22,7 @@
 			"name":"Очень умное видео",
 			"channelName": "Smart TV",
 			"views": 1000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		},
 		{
 			"id": "004",
@@ -30,7 +30,7 @@
 			"name":"Стримчанский",
 			"channelName": "Streem",
 			"views": 50000,
-			"publish date": "2018-08-08T17:38:06.552Z"
+			"publishedDate": "2018-08-08T17:38:06.552Z"
 		}
 		
 	]

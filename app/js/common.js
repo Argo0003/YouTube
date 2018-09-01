@@ -108,7 +108,6 @@ window.onload = function () {
 		${
 			popular.videos.map(videoTemplat).join('')
 			}
-			<button class="btn">ЕЩЁ</button>
 		`
 	};
 	requestPopular.send();
