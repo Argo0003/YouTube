@@ -83,24 +83,38 @@ window.onresize = function () {
 }
 
 
-// VideoItem 
+// Вывод видео на страницу с актуальной информацией
 
 window.onload = function () {
 
-	const request = new XMLHttpRequest();
-	request.open('get', 'https://raw.githubusercontent.com/Argo0003/YouTube/master/app/data/recommended.json');
-	request.onload = function () {
-		const recommended = JSON.parse(request.responseText);
-		console.log(recommended.videos);
-		document.getElementById('videoBlock').innerHTML = `
+	const requestRecommended = new XMLHttpRequest();
+	requestRecommended.open('get', 'https://raw.githubusercontent.com/Argo0003/YouTube/master/app/data/recommended.json');
+	requestRecommended.onload = function () {
+		const recommended = JSON.parse(requestRecommended.responseText);
+		document.getElementById('videoBlockRecomended').innerHTML = `
 		${
-			recommended.videos.map(vieoTemplat).join('')
+			recommended.videos.map(videoTemplat).join('')
 			}
+			<button class="btn">ЕЩЁ</button>
 		`
 	};
-	request.send();
+	requestRecommended.send();
 
-	function vieoTemplat(video) {
+	const requestPopular = new XMLHttpRequest();
+	requestPopular.open('get', 'https://raw.githubusercontent.com/Argo0003/YouTube/master/app/data/popular.json');
+	requestPopular.onload = function () {
+		const popular = JSON.parse(requestPopular.responseText);
+		document.getElementById('videoBlockPopular').innerHTML = `
+		${
+			popular.videos.map(videoTemplat).join('')
+			}
+			<button class="btn">ЕЩЁ</button>
+		`
+	};
+	requestPopular.send();
+
+
+	function videoTemplat(video) {
 		return `
 				<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item">
 					<div id="blind"></div>
@@ -109,56 +123,24 @@ window.onload = function () {
 						<a href="#" class="video-title">${video.name}</a>
 						<a href="#" class="channel-title">${video.channelName}</a>
 						<a href="#">
-							<span class="views">${video.views}</span>
-							<span class="date">${video.publishedDate}</span>
+							<span class="views">${video.views / 1000 } тыс. просмотров &bull;</span>
+							<span class="date">${getDate(video.publishedDate)} дня назад</span>
 						</a>
 					</div>
 				</div>
 				`
 	}
+
+	function getDate(publishedDate) {
+		const nowDate = new Date();
+		const days = Math.floor((Date.parse(nowDate) - Date.parse(publishedDate)) / 86400000);
+		return days;
+	}
+
 }
 
 
 
-
-	// ${ 
-	// 	recommended.videos.map(vieoTemplat).join('')
-	// }
-	// <button class="btn">ЕЩЁ</button>
-
-
-// var   videoItem = document.createElement('div'),
-// 	 videoItemImg = document.createElement('div'),
-// 		description = document.createElement('div'),
-// 		 videoTitle = document.createElement('a'),
-//    chennelTitle = document.createElement('a'),
-// 		  videoLink = document.createElement('a'),
-// 				  views = document.createElement('span'),
-// 		puplishDate = document.createElement('span');
-
-
-// videoItem.className = "col-xl-3 col-lg-3 col-md-4 col-sm-6 col-sm-1 video-item";
-// videoItemImg.className = "video-item-img";
-// description.className = "description";
-// videoTitle.className = "video-title";
-// chennelTitle.className = "channel-title";
-
-// videoTitle.href = "#";
-// chennelTitle.href = "#";
-// videoLink.href = "#";
-
-// views.innerHTML = "dsada";
-// videoTitle.innerHTML = "dsada";
-// chennelTitle.innerHTML = "adsad";
-
-// document.getElementById('videoBlock').insertBefore(videoItem, document.getElementById('btnElse'));
-// videoItem.appendChild(videoItemImg);
-// videoItem.appendChild(description);
-// description.appendChild(videoTitle);
-// description.appendChild(chennelTitle);
-// description.appendChild(videoLink);
-// videoLink.appendChild(views);
-// videoLink.appendChild(puplishDate);
 
 
 
