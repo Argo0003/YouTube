@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+</head>
+
+<body id="bodyID">
+	<header class="top-line-header">
+		<div class="top-line-header-wrap">
+			<button id="buttonNav">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+			<div class="logo">
+				<a href="#" class="logo-link">
+					<img class="logo-img" src="img/logo.png" alt="logo">
+				</a>
+				<span class="logo-county-code">ru</span>
+			</div>
+			<div class="search-wrap">
+				<input type="text" id="inputSearch" placeholder="Введите запрос">
+				<button class="search-button" id="searchButton">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</button>
+			</div>
+			<div class="users-panel">
+				<button title="Создать видео или запись">
+					<i class="fa fa-video-camera" aria-hidden="true"></i>
+				</button>
+				<button title="Приложения YouTube">
+					<i class="fa fa-table" aria-hidden="true"></i>
+				</button>
+				<button title="Сooбщения">
+					<i class="fa fa-comment" aria-hidden="true"></i>
+				</button>
+				<button title="Уведомления">
+					<i class="fa fa-bell" aria-hidden="true"></i>
+				</button>
+				<button>
+					<i class="fa fa-user-circle" aria-hidden="true"></i>
+				</button>
+			</div>
+		</div>
+	</header>
+	<section class="main-section" id="mainSection">
+		<div class="row no-gutters">
+			<div class="col-md-2 left-panel" id="leftPanel">
+				<div class="left-panel-section">
+					<a class="active" href="#" title="Главная">
+						<i class="fa fa-home" aria-hidden="true"></i>Главная</a>
+					<a href="#" title="В тренде">
+						<i class="fa fa-fire" aria-hidden="true"></i>В тренде</a>
+					<a href="#" title="Подписки">
+						<i class="fa fa-address-book" aria-hidden="true"></i>Подписки</a>
+				</div>
+				<div class="left-panel-section">
+					<a href="#" class="left-navigation-header" title="Библиотека">Библиотека</a>
+					<a href="#" title="История">
+						<i class="fa fa-history" aria-hidden="true"></i>История</a>
+					<a href="#" title="Просмотреть позже">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>Просмотреть позже</a>
+					<a href="#" title="Понравившиеся видео">
+						<i class="fa fa-thumbs-up" aria-hidden="true"></i>Понравившиеся...</a>
+				</div>
+				<div class="left-panel-section">
+					<a href="#" class="left-navigation-header">Подписки</a>
+				</div>
+				<div class="left-panel-section">
+					<span>Другие возможности</span>
+					<a href="#" title="YouTube Premium">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>YouTube Premium</a>
+					<a href="#" title="Фильмы">
+						<i class="fa fa-film" aria-hidden="true"></i>Фильмы</a>
+					<a href="#" title="Прямые трансляции">
+						<i class="fa fa-podcast" aria-hidden="true"></i>Прямые трансляции</a>
+				</div>
+				<div class="left-panel-section">
+					<a href="#" title="Настройки">
+						<i class="fa fa-cog" aria-hidden="true"></i>Настройки</a>
+					<a href="#" title="Cooбщения о нарушениях">
+						<i class="fa fa-flag" aria-hidden="true"></i>Сooбщения о на...</a>
+					<a href="#" title="Справка">
+						<i class="fa fa-question-circle" aria-hidden="true"></i>Справка</a>
+					<a href="#" title="Отправить отзыв">
+						<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Отправить отзыв</a>
+				</div>
+				<div class="left-panel-footer">
+					<div class="left-panel-footer-blog">
+						<a href="#">О сервисе</a>
+						<a href="#">Прессе</a>
+						<a href="#">Правообладателям</a>
+						<a href="#">Авторам</a>
+						<a href="#">Рекламодателям</a>
+						<a href="#">Разработчикам</a>
+						<a href="#">+YouTube</a>
+					</div>
+					<div class="left-panel-footer-blog">
+						<a href="#">Условия использования</a>
+						<a href="#">Конфиденциальность</a>
+						<a href="#">Правила и безопасность</a>
+						<a href="#">Новые функции</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="row no-gutters">
+			<div class="col-md-8 videoPageBlock">
+				<div id="blind"></div>
+
+				<div class="videoWindow">
+					<img src="img/video.jpg" alt="video">
+				</div>
+				<div class="underVideiWindow">
+					<div class="description">
+						<span class="videoPageTitile">Привет мирок</span>
+						<span class="videoPageviews">5000 просмотров</span>
+					</div>
+					<div class="likeAndShare">
+						<div class="likeBlock">
+							<div class="likeRow">
+								<button class="btnVideoPage">
+									<i class="fa fa-thumbs-up" aria-hidden="true"></i>51</button>
+								<button class="btnVideoPage">
+									<i class="fa fa-thumbs-down" aria-hidden="true"></i>10</button>
+							</div>
+							<div id="likeProgress"></div>
+						</div>
+						<button class="btnVideoPage">
+							<i class="fa fa-share" aria-hidden="true"></i>поделиться
+						</button>
+					</div>
+				</div>
+				<div class="chennalInfo">
+					<div class="chennalInfo-header">
+						<div class="infoChennalBlock">
+							<div class="chennalAvatar"></div>
+							<div class="infoChennalBlock-description">
+								<a href="#" class="infoChennalBlock-title">Умные видосы</a>
+								<span class="infoChennalBlock-date">Опубликовано: 19 дек. 2017 г.</span>
+							</div>
+						</div>
+						<button class="subscribeButton">подписатсья
+							<span>178 тыс.</span>
+						</button>
+					</div>
+					<div class="video-descripiton">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt consequuntur at, dolorum iste doloribus dolor earum asperiores
+						iure quam nihil! Quia eaque possimus, nesciunt expedita quibusdam omnis tempore consectetur. Doloribus.
+					</div>
+				</div>
+				<div class="comments">
+					<div class="comments-header">
+						<span class="numberOfComments">122 комментария</span>
+						<button class="sortComments">
+							<i class="fa fa-list" aria-hidden="true"></i>упорядочить</button>
+					</div>
+					<div class="comments-body">
+
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 recomendedRigthPanel">
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+				<a href="#" class="recomendedRigthPanel-video">
+					<div class="recomendedRigthPanel-video__window">
+						<img src="img/video.jpg" alt="video">
+					</div>
+					<div class="recomendedRigthPanel-video__description">
+						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
+						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
+						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/common.js"></script>
+	<script src="js/videoPage.js"></script>
+</body>
+
+</html>

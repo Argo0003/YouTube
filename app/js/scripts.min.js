@@ -108,7 +108,7 @@ requestRecommended.onload = function () {
 				recommended.videos.map(videoTemplat).splice(0,numberOfVideo).join('')
 				}
 					<button class="btn" id="btnElse">ЕЩЁ</button>
-		
+					
 				`
 				addVideos();
 			}
