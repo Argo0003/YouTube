@@ -89,14 +89,35 @@ const requestRecommended = new XMLHttpRequest();
 requestRecommended.open('get', 'https://raw.githubusercontent.com/Argo0003/YouTube/master/app/data/recommended.json');
 requestRecommended.onload = function () {
 	const recommended = JSON.parse(requestRecommended.responseText);
+	let numberOfVideo = 8;
 	document.getElementById('videoBlockRecomended').innerHTML = `
 		${
-		recommended.videos.map(videoTemplat).join('')
+
+		recommended.videos.map(videoTemplat).splice(0,numberOfVideo).join('')
 		}
-			<button class="btn">ЕЩЁ</button>
+			<button class="btn" id="btnElse">ЕЩЁ</button>
+
 		`
+		addVideos();
+		function addVideos() {
+			document.getElementById('btnElse').onclick = function() {
+				numberOfVideo += 8;
+				document.getElementById('videoBlockRecomended').innerHTML = `
+				${
+		
+				recommended.videos.map(videoTemplat).splice(0,numberOfVideo).join('')
+				}
+					<button class="btn" id="btnElse">ЕЩЁ</button>
+		
+				`
+				addVideos();
+			}
+		}
+	
 };
 requestRecommended.send();
+
+
 
 const requestPopular = new XMLHttpRequest();
 requestPopular.open('get', 'https://raw.githubusercontent.com/Argo0003/YouTube/master/app/data/popular.json');
@@ -128,7 +149,7 @@ requestLastPublished.onload = function () {
 	const LastPublished = JSON.parse(requestLastPublished.responseText);
 	document.getElementById('videoBlockLastPublished').innerHTML = `
 		${
-		LastPublished.videos.map(videoTemplat).join('')
+		LastPublished.videos.map(videoTemplat)
 		}
 		`
 };
