@@ -311,10 +311,19 @@
 }
 
 .title {
+	text-decoration: none;
 	font-weight: 500;
 	display: block;
 	margin: 25px 0;
+	color: #000000;
 }
+
+.title:hover {
+	display: block;
+	color: #000000;
+	text-decoration: none;
+}
+
 .video-block{
 	border-bottom: 1px solid #EEEEEE;
 	padding-bottom: 15px;
