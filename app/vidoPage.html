@@ -115,13 +115,12 @@
 		<div class="row no-gutters">
 			<div class="col-md-8 videoPageBlock">
 				<div id="blind"></div>
-
 				<div class="videoWindow">
 					<img src="img/video.jpg" alt="video">
 				</div>
 				<div class="underVideiWindow">
 					<div class="description">
-						<span class="videoPageTitile">Привет мирок</span>
+						<span class="videoPageTitile">Полезное видео</span>
 						<span class="videoPageviews">5000 просмотров</span>
 					</div>
 					<div class="likeAndShare">
@@ -159,106 +158,43 @@
 				</div>
 				<div class="comments">
 					<div class="comments-header">
-						<span class="numberOfComments">122 комментария</span>
+						<span class="numberOfComments" id="numberOfComments"></span>
 						<button class="sortComments">
 							<i class="fa fa-list" aria-hidden="true"></i>упорядочить</button>
 					</div>
 					<div class="comments-body">
+						<div class="row col-md-12">
+							<form>
+								<div class="form-block">
+									<input type="text" class="nameInput" id="inputName" placeholder="Ваше имя" id="commentName">
+								</div>
+								<div class="form-block">
+									<input type="text" id="inputText" placeholder="Ваш комментарий">
+								</div>
+								<div class="form-block">
+									<button type="submit" class="btnComment" id="commentAdd">Оставить комментарий</button>
+								</div>
+							</form>
+							<div id="commentField">
+
+							</div>
+						</div>
 
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 recomendedRigthPanel">
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
-				<a href="#" class="recomendedRigthPanel-video">
-					<div class="recomendedRigthPanel-video__window">
-						<img src="img/video.jpg" alt="video">
-					</div>
-					<div class="recomendedRigthPanel-video__description">
-						<span class="recomendedRigthPanel-video__description__videoTitle">Про слоника</span>
-						<span class="recomendedRigthPanel-video__description__chennalTitle">слоникиТВ</span>
-						<span class="recomendedRigthPanel-video__description__views">634 тыс.просмотров</span>
-					</div>
-				</a>
+			<div class="col-md-4 recomendedRigthPanel" id="recomendedRigthPanel">
+
+			</div>
+		</div>
+	<div class="popUpWrap" id="popUpWrap">
+			<div class="popUp">
+				<form>
+					<input type="text" class="popUpNameInput" id="popUpNameInput" placeholder="Имя">
+					<input type="text" class="popUpTextInput" id="popUpTextInput" placeholder="Комментарий">
+					<button type="submit" class="btnComment" id="popUpPost">Отредактировать</button>
+					<button type="submit" class="btnComment btnComment-regect" id="popUpregect">Отмена</button>
+				</form>
 			</div>
 		</div>
 	</section>
