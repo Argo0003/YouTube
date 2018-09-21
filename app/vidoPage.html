@@ -152,19 +152,22 @@
 						</button>
 					</div>
 					<div class="video-descripiton">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt consequuntur at, dolorum iste doloribus dolor earum asperiores
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt consequuntur at, dolorum iste doloribus dolor
+						earum asperiores
 						iure quam nihil! Quia eaque possimus, nesciunt expedita quibusdam omnis tempore consectetur. Doloribus.
 					</div>
 				</div>
 				<div class="comments">
-					<div class="comments-header">
+					<div class="comments-header" id="comments-header">
 						<span class="numberOfComments" id="numberOfComments"></span>
-						<button class="sortComments">
-							<i class="fa fa-list" aria-hidden="true"></i>упорядочить</button>
+						<button class="sortComments" id="sortButtName">
+							<i class="fa fa-list" aria-hidden="true"></i>упорядочить по имени</button>
+						<button class="sortComments" id="sortButtData">
+							<i class="fa fa-list" aria-hidden="true"></i>упорядочить по дате</button>
 					</div>
 					<div class="comments-body">
 						<div class="row col-md-12">
-							<form>
+							<form id="CommentsForm">
 								<div class="form-block">
 									<input type="text" class="nameInput" id="inputName" placeholder="Ваше имя" id="commentName" autocomplete="off">
 								</div>
@@ -187,20 +190,29 @@
 
 			</div>
 		</div>
-	<div class="popUpWrap" id="popUpWrap">
-			<div class="popUp">
+		<div class="popUpWrap" id="popUpWrap">
+			<!-- <div class="popUp">
 				<form>
-					<input type="text" class="popUpNameInput" id="popUpNameInput" placeholder="Имя" autocomplete="off">
-					<input type="text" class="popUpTextInput" id="popUpTextInput" placeholder="Комментарий" autocomplete="off">
+					<input type="text" class="popUpNameInput" id="popUpnameInput" placeholder="Имя" autocomplete="off"> 
+					<input type="text" class="popUpTextInput" id="popUptextInput" placeholder="Комментарий" autocomplete="off">
 					<button type="submit" class="btnComment" id="popUpPost">Отредактировать</button>
-					<button type="submit" class="btnComment btnComment-regect" id="popUpregect">Отмена</button>
+					<button type="submit" class="btnComment btnComment-regect" id="popUpreject">Отмана</button>
+					<button type="submit" class="btnComment btnComment-regect" id="popUpDelete">Удалить</button>
 				</form>
-			</div>
+			</div> -->
 		</div>
 	</section>
 
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="js/commentsMenu.js"></script>
+	<script src="js/DragAndDrop.js"></script>
+	<script src="js/popUp.js"></script>
+	<script src="js/comment.js"></script>
+	<script src="js/comments.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/videoPage.js"></script>
+
 </body>
 
 </html>
